@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { BsCameraVideo } from "react-icons/bs";
 import { dataEvent } from "../../../data/dataEvent.js";
 import dayjs from "dayjs";
+import { FaUserCircle } from "react-icons/fa";
 import GlobalContext from "../../../context/GlobalContext.js";
 export default function Event() {
   const { daySelect } = useContext(GlobalContext);
@@ -70,11 +71,14 @@ export default function Event() {
             </div>
             {e.avt && (
               <span className="flex items-center gap-2">
-                <img
+                {/* <img
                   src={e.avt}
                   alt="avt"
                   className="h-[35px] w-[35px] rounded-full"
-                />
+                /> */}
+                <span className="h-[30px] flex items-center justify-center w-[30px] rounded-full text-2xl hover:scale-105 transition-all">
+                  <FaUserCircle />
+                </span>
                 <a
                   href="https://www.facebook.com/nguyen.bin.796569"
                   className="underline text-[#5684AE]"
